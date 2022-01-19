@@ -13,6 +13,14 @@ const connect = function () {
     console.log('we Connected');
   });
 
+  conn.on('connect', () => {
+    conn.write("Name: PBB");
+  });
+
+  // conn.on('connect', () => {
+  //   conn.write("Move: up");
+  // });
+
   conn.on("data", (data) => {
     console.log(data);
   });
